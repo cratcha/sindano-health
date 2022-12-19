@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { sectionVariants } from '../utils/animationVariants';
 import { data } from '../utils/data';
+import { HashLink } from 'react-router-hash-link';
 
 /**
  * Footer Section
@@ -156,9 +157,9 @@ function Footer() {
           <Navigation>
             {data.footer.navigation.map((arrItem, index) => (
               <li key={index}>
-                <a href={arrItem.link} target={arrItem.target}>
+                <HashLink to={arrItem.link} target={arrItem.target}>
                   {arrItem.name}
-                </a>
+                </HashLink>
               </li>
             ))}
           </Navigation>

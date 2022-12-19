@@ -6,6 +6,7 @@ import PrimaryButton from './PrimaryButton';
 import { sectionVariants } from '../utils/animationVariants';
 import Burger from './Burger';
 import { ModalContext } from './App';
+import { HashLink } from 'react-router-hash-link';
 
 export const HeaderStyle = styled.header`
   position: relative;
@@ -41,7 +42,7 @@ export const StyledIcons = styled.li`
   padding: 0 32px 0 0;
 `;
 
-export const StyledLinks = styled.a`
+export const StyledLinks = styled(HashLink)`
   text-decoration: none;
   font-family: ${(props) => props.theme.fonts.families.text};
   font-size: ${(props) => props.theme.fonts.sizes.text_m};
@@ -75,13 +76,13 @@ function Header() {
         <nav>
           <StyledList>
             <StyledIcons>
-              <StyledLinks href="#ourstory">About</StyledLinks>
+              <StyledLinks to="#ourstory">About</StyledLinks>
             </StyledIcons>
             <StyledIcons>
-              <StyledLinks href="#whatwedo">What we do</StyledLinks>
+              <StyledLinks to="#whatwedo">What we do</StyledLinks>
             </StyledIcons>
             <StyledIcons>
-              <StyledLinks href="#faq">FAQ</StyledLinks>
+              <StyledLinks to="#faq">FAQ</StyledLinks>
             </StyledIcons>
           </StyledList>
         </nav>
